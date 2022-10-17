@@ -1,5 +1,7 @@
-import React from 'react'
+import React from 'react';
+import {connect} from 'react-redux';
 
-export default function Message(props) {
-  return <div id="message">Nice job!</div>
+export function Message(props) {//Comes from reducer after being dispatched
+  return <div id="message">{props.infoMessage}</div>
 }
+export default connect(str=> str) (Message);
